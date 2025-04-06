@@ -1,9 +1,256 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 
 .quicksand {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-  };
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* shared style */
+.orange {
+  color: #FEA301;
+}
+
+.blue {
+  color: #01ACFD;
+}
+
+.cyan {
+  color: #05D4DF;
+}
+
+.magenta {
+  color: #5D58EF;
+}
+
+.grad-blue {
+  background: linear-gradient(to bottom, #DEF5FF 0%, #FFFFFF 40%);
+  border: 1px solid #DEF5FF;
+}
+
+.grad-yellow {
+  background: linear-gradient(to bottom, #FFF4DC 0%, #FFFFFF 40%);
+  border: 1px solid #FFF4DC;
+}
+
+.grad-megenta {
+  background: linear-gradient(to bottom, #F2E8FF 0%, #FFFFFF 40%);
+  border: 1px solid #F2E8FF;
+}
+
+
+/* nav style */
+body {
+  margin: 0px 140px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  /* border-color: #FEA301;
+  border-width: 0.5px;
+  border-style: solid; */
+}
+
+.ham-barg {
+  height: 15px;
+  width: 24px;
+  display: none;
+}
+
+.ham-barg img {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+ul .Home {
+  color: #FEA301;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+ul .About {
+  color: #01ACFD;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+ul .Facilities {
+  color: #05D4DF;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+ul .Admission {
+  color: #5D58EF;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-contact {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  background-color: #FEA301;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 60px;
+}
+
+/* Banner style */
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 468px;
+  height: auto;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+
+}
+
+.banner-dscrp {
+  font-size: 1.25rem;
+}
+
+.btn-2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  padding: 10px 45px;
+  border-radius: 12px;
+  border: none;
+}
+
+
+.Standard-Curriculum{
+  padding: 60px 0px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.curriculam-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 80px 0px;
+}
+
+.curriculam-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  border-radius: 18px;
+
+}
+
+.curriculam-card img {
+  width: 136px;
+  height: 136px;
+}
+
+.curriculam-card p {
+  text-align: center;
+}
+
+h5 {
+  margin-bottom: 0px;
+}
+
+.curriculam-card h4 {
+  margin-top: 32px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.circle-button {
+  width: 60px;
+  height: 60px;
+  background-color: hsl(39, 100%, 50%);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-button:hover {
+  background-color: hsl(33, 100%, 45%);
+}
+
+
+
+
+
+
+@media screen and (max-width:390px) {
+  .logo>h2 {
+    display: none;
+  }
+
+  nav ul,
+  nav .btn-contact {
+    display: none;
+  }
+
+  .ham-barg {
+    display: block;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  nav {
+    border-color: #FEA301;
+    border-width: 0.5px;
+    border-style: solid;
+    padding: 10px 20px;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+}
