@@ -249,6 +249,18 @@ h5 {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
+    margin: 8px 16px;
+  }
+  .banner-img {
+    max-width: 336px;
+    height: auto;
+  }
+  .banner-img img{
+    width: 100%;
+  }
+
+  .curriculam-container{
+    grid-template-columns: repeat(1,1fr);
   }
 
 
