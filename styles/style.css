@@ -7,6 +7,7 @@
   font-style: normal;
 }
 
+
 /* shared style */
 .orange {
   color: #FEA301;
@@ -41,10 +42,12 @@
 
 
 /* nav style */
-body {
+header {
   margin: 0px 140px;
 }
-
+body{
+  margin: 0px;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -147,8 +150,18 @@ ul .Admission {
   border: none;
 }
 
+main {
+  
+  background:
+    linear-gradient(to bottom, rgba(254, 163, 1, 0) 0%, rgba(254, 163, 1, 0.2) 60%, rgba(254, 163, 1, 0.3) 100%),
+    url(../assets/bg.png);
+  
+  padding: 60px 140px;
+}
 
-.Standard-Curriculum{
+/* curriculam style */
+
+.Standard-Curriculum {
   padding: 60px 0px;
 }
 
@@ -198,6 +211,7 @@ h5 {
   gap: 15px;
   justify-content: center;
 }
+
 .circle-button {
   width: 60px;
   height: 60px;
@@ -215,12 +229,138 @@ h5 {
   background-color: hsl(33, 100%, 45%);
 }
 
+/* Our Stories style */
+
+.Our-Stories{
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  justify-items: center;
+}
+.story-container img{
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.small-stoy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.big-story{
+  background-color: white;
+  border-radius: 16px;
+}
+small-stories{
+  background-color: white;
+  border-radius: 16px;
+  
+}
+.story-content{
+  margin: 34px 38px;
+}
+.big-story .story-date{
+  padding: 15px 18px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #05D4DF;
+  border-radius: 47px;
+  text-align: center;
+  width: 38%;
+  position:relative;
+  z-index: 1;
+  top: -60px;
+}
+.small-stoy .story-date{
+  padding: 10px 18px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #95B226;
+  border-radius: 47px;
+  text-align: center;
+  width: 58%;
+  position:relative;
+  z-index: 1;
+  top: -55px;
+}
+
+.big-story .story-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 51px;
+}
+.small-stoy .story-title{
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 35px;
+}
+
+.hide{
+  display: none;
+}
+
+/* footer */
+footer{
+  background-color: #01ACFD;
+  padding: 140px;
+  display: flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  color: white;
+}
+footer .company{
+  width: 400px;
+
+}
+.white-logo{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+}
+footer h2{
+  
+  font-size: 2.5rem ;
+  font-weight: 700;
+}
+footer p{
+  
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+footer ul{
+  flex-direction: column;
+  font-size: 1.24rem;
+  font-weight: 400;
+  padding-left: 0px;
+}
+footer h4{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.social-media-icon{
+  display: flex;
+  gap: 10px;
+}
 
 
 
-
-
+/* responsive style */
 @media screen and (max-width:390px) {
+  header{
+    margin: 0px;
+  }
   .logo>h2 {
     display: none;
   }
@@ -251,18 +391,72 @@ h5 {
     text-align: center;
     margin: 8px 16px;
   }
+
   .banner-img {
     max-width: 336px;
     height: auto;
   }
-  .banner-img img{
+
+  .banner-img img {
     width: 100%;
   }
+  main {
+    padding: 40px 16px;
 
-  .curriculam-container{
-    grid-template-columns: repeat(1,1fr);
   }
 
 
+  .curriculam-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Standard-Curriculum {
+    margin: 40px 16px;
+  }
+
+  .btn-container {
+    display: none;
+  }
+
+
+ 
+ 
+    .story-container {
+      display: flex;
+      justify-content: center;
+      max-width: calc(100%-32px);
+    }
+  
+    .big-story {
+      display: none;
+    }
+  
+    .small-stoy {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      gap: 20px;
+      max-width: 100%;
+    }
+  
+    small-stories {
+      width: 100%;
+    }
+    .small-stoy .story-date{
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    width: 90%;
+    }
+    .small-stoy .story-title{
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: -20px;
+      margin-bottom: 20px;
+    }
+
+    footer{
+      padding: 40px 16px;
+      flex-direction: column;
+    }
 
 }
